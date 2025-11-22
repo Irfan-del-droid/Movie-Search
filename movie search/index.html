@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-main-content">
+            <h1>Movie Search App</h1>
+            <div class="search-container">
+                <div class="search-input-button-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search for a movie...">
+                    <span id="searchIcon">🔍</span>
+                </div>
+                <div id="suggestions" class="suggestions hidden"></div>
+            </div>
+        </div>
+        <div id="theme-icon-container">☀️</div>
+    </header>
+
+    <main>
+        <div id="loader" class="loader hidden"></div>
+        <div id="movieList" class="movie-list"></div>
+
+        <div class="pagination-controls hidden" id="pagination">
+            <button id="prevBtn" disabled>Previous</button>
+            <span id="pageNumber">Page 1</span>
+            <button id="nextBtn">Next</button>
+        </div>
+    </main>
+
+    <h2 class="favorites-title">Favorites ❤️</h2>
+    <div id="favoritesList" class="movie-list"></div>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal hidden">
+        <div class="modal-content fade-in">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="movieDetails"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
